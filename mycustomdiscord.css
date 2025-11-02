@@ -1,0 +1,134 @@
+/*
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Update: 1100 rev.3                                                                                ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+@import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);
+@import url(https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/refs/heads/master/Themes/SettingsModal/SettingsModal.theme.css);
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar { 
+    width: 2px !important;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: transparent !important;
+}
+.members-1998pB::-webkit-scrollbar-thumb, 
+.scroller-RmtA4e::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color) !important;
+    border: none !important;
+    border-radius: 0px;
+}
+*::-webkit-scrollbar-corner,
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============================================
+   ŞİMDİ AKTİF COLUMN
+   ============================================ */
+.nowPlayingColumn__133bf {
+    max-width: 360px;
+}
+
+/* ============================================
+   NITRO/MAĞAZA/GÖREVLER (Ana sayfa DM listesi)
+   ============================================ */
+.container_e45859:has([data-list-item-id$="___nitro"]),
+.container_e45859:has([data-list-item-id$="___shop"]),
+.container_e45859:has([data-list-item-id$="___quests"]),
+.wrapper_ebee1d,
+li:has(a[href="/store"]),
+li:has(a[href="/shop"]),
+li:has(a[href="/quest-home"]) {
+    display: none !important;
+}
+
+/* ============================================
+   DİĞER PREMİUM ÖĞELER
+   ============================================ */
+.containerWrapper-1kh54c,
+.buttons_bdf0de > button[aria-haspopup="dialog"],
+.premiumFeatureBorder__9bbb3,
+.container_d6bff4:has(.ctaButton__7d20c),
+.container_da1432 {
+    display: none !important;
+}
+
+/* ============================================
+   AVATAR & PROFILE DECORATIONS
+   ============================================ */
+svg[class*='avatarDecoration_'],
+img[class*='avatarDecoration_'],
+div[class*='profileEffects'],
+div[class*='userProfileModalInner']>header>svg>foreignObject>div[class*='bannerPremium'] {
+    display: none;
+}
+
+/* ============================================
+   SERVER BOOST ELEMENTS
+   ============================================ */
+svg[class*='premiumIcon_'],
+ul > li:has(div[data-list-item-id*='channels___boosts-']),
+div[class^='guildIconContainer_']:has(svg[class^='boostedGuildIconGem_']) {
+    display: none;
+}
+
+/* ============================================
+   ACTIVITY LIST
+   ============================================ */
+h3[class^='membersGroup_']:has(span[role='button']),
+div[class^='container_'] > aside[class^='membersWrap_'] > div[class^='members_'] > div[role^='list'] > div:has(div[class*='openOnHover_']) {
+    display: none;
+}
+
+/* ============================================
+   FORWARD BUTTON
+   ============================================ */
+div[class^='hoverBarButton_'][aria-label='Forward'],
+[aria-label='Forward'][class*='hover'] {
+    display: none;
+}
+
+/* ============================================
+   EVENTS
+   ============================================ */
+#channels > ul > li:has([id^='upcoming-events-']),
+#channels > ul > li:has([id^='upcoming-events-']) + [class^='sectionDivider_'] {
+    display: none;
+}
+
+/* ============================================
+   DISCOVER BUTTON
+   ============================================ */
+div[class^='footer_']:has(div[data-list-item-id='guildsnav___guild-discover-button']),
+div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:has(div[data-list-item-id='guildsnav___guild-discover-button']) {
+    display: none;
+}
+
+/* ============================================
+   SUNUCU EKLE BUTONU
+   ============================================ */
+[data-list-item-id="guildsnav___create-join-button"],
+[data-list-item-id="guildsnav___create-join-button"] *,
+.circleIconButton__5bc7e[aria-label*="Sunucu ekle" i],
+.circleIconButton__5bc7e[aria-label*="Add a Server" i],
+.listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]),
+.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]) {
+    opacity: 0.3 !important;
+    transition: opacity 0.2s ease !important;
+}
+
+[data-list-item-id="guildsnav___create-join-button"]:hover,
+[data-list-item-id="guildsnav___create-join-button"]:hover *,
+.circleIconButton__5bc7e[aria-label*="Sunucu ekle" i]:hover,
+.circleIconButton__5bc7e[aria-label*="Add a Server" i]:hover,
+.listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]):hover,
+.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]):hover {
+    opacity: 1 !important;
+}
