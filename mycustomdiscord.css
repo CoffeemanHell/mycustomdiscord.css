@@ -1,14 +1,12 @@
-/*
+/*-
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ Update: 1100 rev.3                                                                                ║
+║ Update: 1102 rev.3                                                                                ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 
 @import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);
-@import url(https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/refs/heads/master/Themes/SettingsModal/SettingsModal.theme.css);
 
-/* ============================================
-   SCROLLBAR
+/* SCROLLBAR
    ============================================ */
 ::-webkit-scrollbar { 
     width: 2px !important;
@@ -29,15 +27,13 @@
     display: none;
 }
 
-/* ============================================
-   ŞİMDİ AKTİF COLUMN
+/* NOW ACTIVE COLUMN
    ============================================ */
 .nowPlayingColumn__133bf {
     max-width: 360px;
 }
 
-/* ============================================
-   NITRO/MAĞAZA/GÖREVLER (Ana sayfa DM listesi)
+/* NITRO/STORE/TASKS (Homepage DM list)
    ============================================ */
 .container_e45859:has([data-list-item-id$="___nitro"]),
 .container_e45859:has([data-list-item-id$="___shop"]),
@@ -49,8 +45,7 @@ li:has(a[href="/quest-home"]) {
     display: none !important;
 }
 
-/* ============================================
-   DİĞER PREMİUM ÖĞELER
+/* OTHER PREMIUM ...
    ============================================ */
 .containerWrapper-1kh54c,
 .buttons_bdf0de > button[aria-haspopup="dialog"],
@@ -60,8 +55,7 @@ li:has(a[href="/quest-home"]) {
     display: none !important;
 }
 
-/* ============================================
-   AVATAR & PROFILE DECORATIONS
+/* AVATAR & PROFILE DECORATIONS
    ============================================ */
 svg[class*='avatarDecoration_'],
 img[class*='avatarDecoration_'],
@@ -70,8 +64,7 @@ div[class*='userProfileModalInner']>header>svg>foreignObject>div[class*='bannerP
     display: none;
 }
 
-/* ============================================
-   SERVER BOOST ELEMENTS
+/* SERVER BOOST ELEMENTS
    ============================================ */
 svg[class*='premiumIcon_'],
 ul > li:has(div[data-list-item-id*='channels___boosts-']),
@@ -79,40 +72,35 @@ div[class^='guildIconContainer_']:has(svg[class^='boostedGuildIconGem_']) {
     display: none;
 }
 
-/* ============================================
-   ACTIVITY LIST
+/* ACTIVITY LIST
    ============================================ */
 h3[class^='membersGroup_']:has(span[role='button']),
 div[class^='container_'] > aside[class^='membersWrap_'] > div[class^='members_'] > div[role^='list'] > div:has(div[class*='openOnHover_']) {
     display: none;
 }
 
-/* ============================================
-   FORWARD BUTTON
+/* FORWARD BUTTON
    ============================================ */
 div[class^='hoverBarButton_'][aria-label='Forward'],
 [aria-label='Forward'][class*='hover'] {
     display: none;
 }
 
-/* ============================================
-   EVENTS
+/* EVENTS
    ============================================ */
 #channels > ul > li:has([id^='upcoming-events-']),
 #channels > ul > li:has([id^='upcoming-events-']) + [class^='sectionDivider_'] {
     display: none;
 }
 
-/* ============================================
-   DISCOVER BUTTON
+/* DISCOVER BUTTON
    ============================================ */
 div[class^='footer_']:has(div[data-list-item-id='guildsnav___guild-discover-button']),
 div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:has(div[data-list-item-id='guildsnav___guild-discover-button']) {
     display: none;
 }
 
-/* ============================================
-   SUNUCU EKLE BUTONU
+/* ADD SERVER BUTTON
    ============================================ */
 [data-list-item-id="guildsnav___create-join-button"],
 [data-list-item-id="guildsnav___create-join-button"] *,
