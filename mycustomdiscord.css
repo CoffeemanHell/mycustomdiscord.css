@@ -1,6 +1,6 @@
 /*-
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ Update: 1102 rev.3                                                                                ║
+║ Update: 1108 - rev.3                                                                              ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 
@@ -15,7 +15,8 @@
     background-color: transparent !important;
 }
 .members-1998pB::-webkit-scrollbar-thumb, 
-.scroller-RmtA4e::-webkit-scrollbar-thumb {
+.scroller-RmtA4e::-webkit-scrollbar-thumb,
+._99e7cad8d4c55236-scroller::-webkit-scrollbar-thumb {
     background-color: var(--accent-color) !important;
     border: none !important;
     border-radius: 0px;
@@ -29,7 +30,8 @@
 
 /* NOW ACTIVE COLUMN
    ============================================ */
-.nowPlayingColumn__133bf {
+.nowPlayingColumn__133bf,
+._133bf5eea8e33a34-nowPlayingColumn {
     max-width: 360px;
 }
 
@@ -41,7 +43,14 @@
 .wrapper_ebee1d,
 li:has(a[href="/store"]),
 li:has(a[href="/shop"]),
-li:has(a[href="/quest-home"]) {
+li:has(a[href="/quest-home"]),
+[data-list-item-id="private-channels-uid_29___nitro"],
+[data-list-item-id="private-channels-uid_29___shop"],
+[data-list-item-id="private-channels-uid_29___quests"],
+._972a0d22c8afa7f0-channel:has([href="/store"]),
+._972a0d22c8afa7f0-channel:has([href="/shop"]),
+._972a0d22c8afa7f0-channel:has([href="/quest-home"]),
+._553bf02027ac2419-wrapper {
     display: none !important;
 }
 
@@ -51,7 +60,9 @@ li:has(a[href="/quest-home"]) {
 .buttons_bdf0de > button[aria-haspopup="dialog"],
 .premiumFeatureBorder__9bbb3,
 .container_d6bff4:has(.ctaButton__7d20c),
-.container_da1432 {
+.container_da1432,
+._4ed1af9a212b8f4f-marketingButtonBackground,
+._4ed1af9a212b8f4f-newBadge {
     display: none !important;
 }
 
@@ -60,8 +71,10 @@ li:has(a[href="/quest-home"]) {
 svg[class*='avatarDecoration_'],
 img[class*='avatarDecoration_'],
 div[class*='profileEffects'],
-div[class*='userProfileModalInner']>header>svg>foreignObject>div[class*='bannerPremium'] {
-    display: none;
+div[class*='userProfileModalInner']>header>svg>foreignObject>div[class*='bannerPremium'],
+._44b0c28be7879b7b-avatarDecoration,
+svg[class*='_44b0c28be7879b7b-avatarDecoration'] {
+    display: none !important;
 }
 
 /* SERVER BOOST ELEMENTS
@@ -96,7 +109,9 @@ div[class^='hoverBarButton_'][aria-label='Forward'],
 /* DISCOVER BUTTON
    ============================================ */
 div[class^='footer_']:has(div[data-list-item-id='guildsnav___guild-discover-button']),
-div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:has(div[data-list-item-id='guildsnav___guild-discover-button']) {
+div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:has(div[data-list-item-id='guildsnav___guild-discover-button']),
+._650eb104245d257b-listItem:has([data-list-item-id='guildsnav___guild-discover-button']),
+._5bc7ed9d4097f6b5-circleIconButton.ef3116c2da186559-discoveryIcon {
     display: none;
 }
 
@@ -106,8 +121,11 @@ div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:h
 [data-list-item-id="guildsnav___create-join-button"] *,
 .circleIconButton__5bc7e[aria-label*="Sunucu ekle" i],
 .circleIconButton__5bc7e[aria-label*="Add a Server" i],
+.circleIconButton__5bc7e[aria-label*="Bir Sunucu ekle" i],
 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]),
-.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]) {
+.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]),
+._650eb104245d257b-listItem:has([data-list-item-id="guildsnav___create-join-button"]),
+._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i] {
     opacity: 0.3 !important;
     transition: opacity 0.2s ease !important;
 }
@@ -116,7 +134,10 @@ div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:h
 [data-list-item-id="guildsnav___create-join-button"]:hover *,
 .circleIconButton__5bc7e[aria-label*="Sunucu ekle" i]:hover,
 .circleIconButton__5bc7e[aria-label*="Add a Server" i]:hover,
+.circleIconButton__5bc7e[aria-label*="Bir Sunucu ekle" i]:hover,
 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]):hover,
-.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]):hover {
+.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]):hover,
+._650eb104245d257b-listItem:has([data-list-item-id="guildsnav___create-join-button"]):hover,
+._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i]:hover {
     opacity: 1 !important;
 }
