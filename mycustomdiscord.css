@@ -1,31 +1,14 @@
 /*-
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ Update: 1108 - rev.3                                                                              ║
+║ Update: 1120 - rev.3                                                                              ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 
-/* fix */
-#message-add-reaction-1 {
-    display: none;
-}
-
 @import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);
 
-/* SCROLLBAR
+/* SCROLLBAR NONE
    ============================================ */
-::-webkit-scrollbar {
-    width: 2px !important;
-}
-::-webkit-scrollbar-track-piece {
-    background-color: transparent !important;
-}
-.members-1998pB::-webkit-scrollbar-thumb,
-.scroller-RmtA4e::-webkit-scrollbar-thumb,
-._99e7cad8d4c55236-scroller::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color) !important;
-    border: none !important;
-    border-radius: 0px;
-}
+
 *::-webkit-scrollbar-corner,
 *::-webkit-scrollbar-track,
 *::-webkit-scrollbar-thumb,
@@ -41,51 +24,14 @@
     /*display: none !important; */
 }
 
-/* NITRO/STORE/TASKS (Homepage DM list)
-   ============================================ */
-.container_e45859:has([data-list-item-id$="___nitro"]),
-.container_e45859:has([data-list-item-id$="___shop"]),
-.container_e45859:has([data-list-item-id$="___quests"]),
-.wrapper_ebee1d,
-li:has(a[href="/store"]),
-li:has(a[href="/shop"]),
-li:has(a[href="/quest-home"]),
-[data-list-item-id="private-channels-uid_29___nitro"],
-[data-list-item-id="private-channels-uid_29___shop"],
-[data-list-item-id="private-channels-uid_29___quests"],
-._972a0d22c8afa7f0-channel:has([href="/store"]),
-._972a0d22c8afa7f0-channel:has([href="/shop"]),
-._972a0d22c8afa7f0-channel:has([href="/quest-home"]),
-._553bf02027ac2419-wrapper {
-    display: none !important;
-}
-
-/* OTHER PREMIUM ...
-   ============================================ */
-.containerWrapper-1kh54c,
-.buttons_bdf0de > button[aria-haspopup="dialog"],
-.premiumFeatureBorder__9bbb3,
-.container_d6bff4:has(.ctaButton__7d20c),
-.container_da1432,
-._4ed1af9a212b8f4f-marketingButtonBackground,
-._4ed1af9a212b8f4f-newBadge {
-    display: none !important;
-}
-
 /* AVATAR & PROFILE DECORATIONS
    ============================================ */
 img[class*="avatarDecoration"],
-._44b0c28be7879b7b-avatarDecoration,
-._44b0c28be7879b7b-avatarDecorationContainer,
-div[class*="userProfileModalInner"]
-    > header
-    > svg
-    > foreignObject
-    > div[class*="bannerPremium"] {
+._44b0c28be7879b7b-avatarDecoration {
     display: none !important;
 }
 
-/* DISCOVER BUTTON
+/* DISCOVER BUTTON NONE
    ============================================ */
 div[class^="footer_"]:has(
         div[data-list-item-id="guildsnav___guild-discover-button"]
@@ -104,13 +50,6 @@ div[class^="itemsContainer_"]
 
 /* ADD SERVER BUTTON
    ============================================ */
-[data-list-item-id="guildsnav___create-join-button"],
-[data-list-item-id="guildsnav___create-join-button"] *,
-.circleIconButton__5bc7e[aria-label*="Sunucu ekle" i],
-.circleIconButton__5bc7e[aria-label*="Add a Server" i],
-.circleIconButton__5bc7e[aria-label*="Bir Sunucu ekle" i],
-.listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]),
-.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]),
 ._650eb104245d257b-listItem:has(
     [data-list-item-id="guildsnav___create-join-button"]
 ),
@@ -119,15 +58,6 @@ div[class^="itemsContainer_"]
     transition: opacity 0.2s ease !important;
 }
 
-[data-list-item-id="guildsnav___create-join-button"]:hover,
-[data-list-item-id="guildsnav___create-join-button"]:hover *,
-.circleIconButton__5bc7e[aria-label*="Sunucu ekle" i]:hover,
-.circleIconButton__5bc7e[aria-label*="Add a Server" i]:hover,
-.circleIconButton__5bc7e[aria-label*="Bir Sunucu ekle" i]:hover,
-.listItem__650eb:has(
-        [data-list-item-id="guildsnav___create-join-button"]
-    ):hover,
-.wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]):hover,
 ._650eb104245d257b-listItem:has(
         [data-list-item-id="guildsnav___create-join-button"]
     ):hover,
