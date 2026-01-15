@@ -28,7 +28,7 @@
    ============================================ */
 img[class*="avatarDecoration"],
 ._44b0c28be7879b7b-avatarDecoration {
-    display: none !important;
+    display: none;
 }
 
 /* DISCOVER BUTTON NONE
@@ -54,15 +54,15 @@ div[class^="itemsContainer_"]
     [data-list-item-id="guildsnav___create-join-button"]
 ),
 ._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i] {
-    opacity: 0.3 !important;
-    transition: opacity 0.2s ease !important;
+    opacity: 0.3;
+    transition: opacity 0.2s ease;
 }
 
 ._650eb104245d257b-listItem:has(
         [data-list-item-id="guildsnav___create-join-button"]
     ):hover,
 ._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i]:hover {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 /* (Nameplates & Clan Tags)
@@ -71,10 +71,10 @@ div[class^="itemsContainer_"]
 ._4bbc6dc06e75ad52-container,
 div[class*="nameplated"] > div[class*="container"],
 img[class*="_4bbc6dc06e75ad52-img"] {
-    display: none !important;
+    display: none;
 }
 [class*="clanTag"],
 ._972a0d22c8afa7f0-clanTag,
 span[class*="chipletContainer"] {
-    display: none !important;
+    display: none;
 }
