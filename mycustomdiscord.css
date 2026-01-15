@@ -4,17 +4,22 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 
+/* fix */
+#message-add-reaction-1 {
+    display: none;
+}
+
 @import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);
 
 /* SCROLLBAR
    ============================================ */
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     width: 2px !important;
 }
 ::-webkit-scrollbar-track-piece {
     background-color: transparent !important;
 }
-.members-1998pB::-webkit-scrollbar-thumb, 
+.members-1998pB::-webkit-scrollbar-thumb,
 .scroller-RmtA4e::-webkit-scrollbar-thumb,
 ._99e7cad8d4c55236-scroller::-webkit-scrollbar-thumb {
     background-color: var(--accent-color) !important;
@@ -33,6 +38,7 @@
 .nowPlayingColumn__133bf,
 ._133bf5eea8e33a34-nowPlayingColumn {
     max-width: 360px;
+    /*display: none !important; */
 }
 
 /* NITRO/STORE/TASKS (Homepage DM list)
@@ -68,49 +74,30 @@ li:has(a[href="/quest-home"]),
 
 /* AVATAR & PROFILE DECORATIONS
    ============================================ */
-svg[class*='avatarDecoration_'],
-img[class*='avatarDecoration_'],
-div[class*='profileEffects'],
-div[class*='userProfileModalInner']>header>svg>foreignObject>div[class*='bannerPremium'],
+img[class*="avatarDecoration"],
 ._44b0c28be7879b7b-avatarDecoration,
-svg[class*='_44b0c28be7879b7b-avatarDecoration'] {
+._44b0c28be7879b7b-avatarDecorationContainer,
+div[class*="userProfileModalInner"]
+    > header
+    > svg
+    > foreignObject
+    > div[class*="bannerPremium"] {
     display: none !important;
-}
-
-/* SERVER BOOST ELEMENTS
-   ============================================ */
-svg[class*='premiumIcon_'],
-ul > li:has(div[data-list-item-id*='channels___boosts-']),
-div[class^='guildIconContainer_']:has(svg[class^='boostedGuildIconGem_']) {
-    display: none;
-}
-
-/* ACTIVITY LIST
-   ============================================ */
-h3[class^='membersGroup_']:has(span[role='button']),
-div[class^='container_'] > aside[class^='membersWrap_'] > div[class^='members_'] > div[role^='list'] > div:has(div[class*='openOnHover_']) {
-    display: none;
-}
-
-/* FORWARD BUTTON
-   ============================================ */
-div[class^='hoverBarButton_'][aria-label='Forward'],
-[aria-label='Forward'][class*='hover'] {
-    display: none;
-}
-
-/* EVENTS
-   ============================================ */
-#channels > ul > li:has([id^='upcoming-events-']),
-#channels > ul > li:has([id^='upcoming-events-']) + [class^='sectionDivider_'] {
-    display: none;
 }
 
 /* DISCOVER BUTTON
    ============================================ */
-div[class^='footer_']:has(div[data-list-item-id='guildsnav___guild-discover-button']),
-div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:has(div[data-list-item-id='guildsnav___guild-discover-button']),
-._650eb104245d257b-listItem:has([data-list-item-id='guildsnav___guild-discover-button']),
+div[class^="footer_"]:has(
+        div[data-list-item-id="guildsnav___guild-discover-button"]
+    ),
+div[class^="itemsContainer_"]
+    > div[class^="stack_"]
+    > div[class^="listItem_"]:has(
+        div[data-list-item-id="guildsnav___guild-discover-button"]
+    ),
+._650eb104245d257b-listItem:has(
+    [data-list-item-id="guildsnav___guild-discover-button"]
+),
 ._5bc7ed9d4097f6b5-circleIconButton.ef3116c2da186559-discoveryIcon {
     display: none;
 }
@@ -124,7 +111,9 @@ div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:h
 .circleIconButton__5bc7e[aria-label*="Bir Sunucu ekle" i],
 .listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]),
 .wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]),
-._650eb104245d257b-listItem:has([data-list-item-id="guildsnav___create-join-button"]),
+._650eb104245d257b-listItem:has(
+    [data-list-item-id="guildsnav___create-join-button"]
+),
 ._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i] {
     opacity: 0.3 !important;
     transition: opacity 0.2s ease !important;
@@ -135,9 +124,27 @@ div[class^='itemsContainer_'] > div[class^='stack_'] > div[class^='listItem_']:h
 .circleIconButton__5bc7e[aria-label*="Sunucu ekle" i]:hover,
 .circleIconButton__5bc7e[aria-label*="Add a Server" i]:hover,
 .circleIconButton__5bc7e[aria-label*="Bir Sunucu ekle" i]:hover,
-.listItem__650eb:has([data-list-item-id="guildsnav___create-join-button"]):hover,
+.listItem__650eb:has(
+        [data-list-item-id="guildsnav___create-join-button"]
+    ):hover,
 .wrapper_cc5dd2:has([data-list-item-id="guildsnav___create-join-button"]):hover,
-._650eb104245d257b-listItem:has([data-list-item-id="guildsnav___create-join-button"]):hover,
+._650eb104245d257b-listItem:has(
+        [data-list-item-id="guildsnav___create-join-button"]
+    ):hover,
 ._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i]:hover {
     opacity: 1 !important;
+}
+
+/* (Nameplates & Clan Tags)
+   ============================================ */
+
+._4bbc6dc06e75ad52-container,
+div[class*="nameplated"] > div[class*="container"],
+img[class*="_4bbc6dc06e75ad52-img"] {
+    display: none !important;
+}
+[class*="clanTag"],
+._972a0d22c8afa7f0-clanTag,
+span[class*="chipletContainer"] {
+    display: none !important;
 }
