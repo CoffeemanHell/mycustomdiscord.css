@@ -1,76 +1,75 @@
-/*-
+/*
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ Update: 1121 - rev.3                                                                              ║
+║ Update: 1150 - rev.3                                                                              ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
-
 @import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);
+@layer UserTheme {
+    /* SCROLLBAR & FONTS
+       ============================================ */
+    :root {
+        --font-primary: system-ui, "gg sans" !important;
+    }
+    * {
+        scrollbar-width: none;
+        interpolate-size: allow-keywords;
+    }
+    /* LAYOUT ADJUSTMENTS
+       ============================================ */
+    @scope (#app-mount) {
+        [class*="nowPlayingColumn" i] {
+            max-inline-size: 360px !important;
+            container-type: inline-size;
+        }
+    }
+    /* GLOBAL HIDING
+       ============================================ */
+    :is(
+        [class*="avatarDecoration" i],
+        [class*="profileEffects" i],
+        [src*="nameplate" i],
+        [class*="clanTag" i],
+        [class*="chipletContainer" i],
+        [class*="nameplated" i] > [class*="container" i],
+        [class*="circleIconButton" i][class*="discoveryIcon" i],
+        [class*="listNode" i]:has([data-list-item-id*="guild-discover"])
+    ) {
+        display: none !important;
+    }
+    /* NAV LOGIC
+       ============================================ */
+    :is([class^="footer" i], [class*="listItem" i]):has(
+        [data-list-item-id*="guild-discover"]
+    ) {
+        display: none !important;
+    }
+    /* ANIMATIONS
+       ============================================ */
+    [class*="layerContainer" i] [class*="layer" i],
+    [class*="menu" i],
+    [class*="tooltip" i] {
+        will-change: transform, opacity;
+        transition:
+            opacity 0.1s cubic-bezier(0.2, 0, 0, 1),
+            transform 0.1s cubic-bezier(0.2, 0, 0, 1);
 
-/* SCROLLBAR NONE
-   ============================================ */
+        @starting-style {
+            opacity: 0;
+            transform: scale(0.95) translateY(5px);
+        }
+    }
+    /* INTERACTIVE ELEMENTS
+       ============================================ */
+    :is(
+        [class*="listItem" i]:has([data-list-item-id*="create-join"]),
+        [class*="circleIconButton" i][aria-label*="Sunucu ekle" i],
+        [class*="circleIconButton" i][aria-label*="Add Server" i]
+    ) {
+        opacity: 0.4;
+        transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-body ::-webkit-scrollbar {
-    display: none !important;
-}
-
-/* NOW ACTIVE COLUMN
-   ============================================ */
-.nowPlayingColumn__133bf,
-._133bf5eea8e33a34-nowPlayingColumn {
-    max-width: 360px !important;
-}
-
-/* AVATAR & PROFILE DECORATIONS
-   ============================================ */
-img[class*="avatarDecoration"],
-._44b0c28be7879b7b-avatarDecoration {
-    display: none !important;
-}
-
-/* DISCOVER BUTTON NONE
-   ============================================ */
-div[class^="footer_"]:has(
-        div[data-list-item-id="guildsnav___guild-discover-button"]
-    ),
-div[class^="itemsContainer_"]
-    > div[class^="stack_"]
-    > div[class^="listItem_"]:has(
-        div[data-list-item-id="guildsnav___guild-discover-button"]
-    ),
-._650eb104245d257b-listItem:has(
-    [data-list-item-id="guildsnav___guild-discover-button"]
-),
-._5bc7ed9d4097f6b5-circleIconButton.ef3116c2da186559-discoveryIcon {
-    display: none !important;
-}
-
-/* ADD SERVER BUTTON
-   ============================================ */
-._650eb104245d257b-listItem:has(
-    [data-list-item-id="guildsnav___create-join-button"]
-),
-._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i] {
-    opacity: 0.3 !important;
-    transition: opacity 0.2s ease !important;
-}
-
-._650eb104245d257b-listItem:has(
-        [data-list-item-id="guildsnav___create-join-button"]
-    ):hover,
-._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i]:hover {
-    opacity: 1 !important;
-}
-
-/* (Nameplates & Clan Tags)
-   ============================================ */
-
-._4bbc6dc06e75ad52-container,
-div[class*="nameplated"] > div[class*="container"],
-img[class*="_4bbc6dc06e75ad52-img"] {
-    display: none !important;
-}
-[class*="clanTag"],
-._972a0d22c8afa7f0-clanTag,
-span[class*="chipletContainer"] {
-    display: none !important;
+        &:hover {
+            opacity: 1;
+        }
+    }
 }
