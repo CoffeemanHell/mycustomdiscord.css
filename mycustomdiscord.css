@@ -1,6 +1,6 @@
 /*-
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════╗
-║ Update: 1120 - rev.3                                                                              ║
+║ Update: 1121 - rev.3                                                                              ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 
@@ -9,26 +9,22 @@
 /* SCROLLBAR NONE
    ============================================ */
 
-*::-webkit-scrollbar-corner,
-*::-webkit-scrollbar-track,
-*::-webkit-scrollbar-thumb,
-*::-webkit-scrollbar {
-    display: none;
+body ::-webkit-scrollbar {
+    display: none !important;
 }
 
 /* NOW ACTIVE COLUMN
    ============================================ */
 .nowPlayingColumn__133bf,
 ._133bf5eea8e33a34-nowPlayingColumn {
-    max-width: 360px;
-    /*display: none !important; */
+    max-width: 360px !important;
 }
 
 /* AVATAR & PROFILE DECORATIONS
    ============================================ */
 img[class*="avatarDecoration"],
 ._44b0c28be7879b7b-avatarDecoration {
-    display: none;
+    display: none !important;
 }
 
 /* DISCOVER BUTTON NONE
@@ -45,7 +41,7 @@ div[class^="itemsContainer_"]
     [data-list-item-id="guildsnav___guild-discover-button"]
 ),
 ._5bc7ed9d4097f6b5-circleIconButton.ef3116c2da186559-discoveryIcon {
-    display: none;
+    display: none !important;
 }
 
 /* ADD SERVER BUTTON
@@ -54,15 +50,15 @@ div[class^="itemsContainer_"]
     [data-list-item-id="guildsnav___create-join-button"]
 ),
 ._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i] {
-    opacity: 0.3;
-    transition: opacity 0.2s ease;
+    opacity: 0.3 !important;
+    transition: opacity 0.2s ease !important;
 }
 
 ._650eb104245d257b-listItem:has(
         [data-list-item-id="guildsnav___create-join-button"]
     ):hover,
 ._5bc7ed9d4097f6b5-circleIconButton[aria-label*="Sunucu ekle" i]:hover {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 /* (Nameplates & Clan Tags)
@@ -71,10 +67,10 @@ div[class^="itemsContainer_"]
 ._4bbc6dc06e75ad52-container,
 div[class*="nameplated"] > div[class*="container"],
 img[class*="_4bbc6dc06e75ad52-img"] {
-    display: none;
+    display: none !important;
 }
 [class*="clanTag"],
 ._972a0d22c8afa7f0-clanTag,
 span[class*="chipletContainer"] {
-    display: none;
+    display: none !important;
 }
