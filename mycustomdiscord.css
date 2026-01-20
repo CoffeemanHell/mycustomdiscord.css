@@ -9,10 +9,12 @@
     :root {
         --font-primary: system-ui, "gg sans" !important;
     }
+
     * {
         scrollbar-width: none;
         interpolate-size: allow-keywords;
     }
+
     /* LAYOUT ADJUSTMENTS
        ============================================ */
     @scope (#app-mount) {
@@ -21,6 +23,7 @@
             container-type: inline-size;
         }
     }
+
     /* GLOBAL HIDING
        ============================================ */
     :is(
@@ -35,6 +38,7 @@
     ) {
         display: none !important;
     }
+
     /* NAV LOGIC
        ============================================ */
     :is([class^="footer" i], [class*="listItem" i]):has(
@@ -42,6 +46,7 @@
     ) {
         display: none !important;
     }
+
     /* ANIMATIONS
        ============================================ */
     [class*="layerContainer" i] [class*="layer" i],
@@ -57,6 +62,7 @@
             transform: scale(0.95) translateY(5px);
         }
     }
+
     /* INTERACTIVE ELEMENTS
        ============================================ */
     :is(
@@ -85,24 +91,29 @@
 div[class$="-colorPremium"]:has(svg[class$="-giftIcon"]) {
     display: none !important;
 }
+
 /* Game server ad */
 div[id^="popout_"]:has(img[class$="-gameServerHostingImage"]) {
     display: none !important;
 }
+
 /* Nitro tab */
 li[class*="-channel"]:has(a[href="/store"]) {
     display: none !important;
 }
+
 /* Store tab */
 li[class*="-container"]:has(a[href="/shop"]) {
     display: none !important;
 }
+
 /* Quests tab */
 div[class*="-wrapper"][style^="--custom-shine-dimensions"]:has(
         [href="/quest-home"]
     ) {
     display: none !important;
 }
+
 /* Gift button */
 div[class*="-buttons"]
     > div[class$="-button"]:has(div[class*="lottieIcon"]):not(
@@ -110,10 +121,12 @@ div[class*="-buttons"]
     ):not(div[class$="app-launcher-entrypoint"]) {
     display: none !important;
 }
+
 /* Nitro upsell banner in emoji picker */
 div[class$="-emojiPicker"] div[class$="-upsellContainerFloating"] {
     display: none !important;
 }
+
 /* Nitro nag in bottom left pop-out personal mini profile */
 div[class$="-inner"]
     > div[class$="-scrollerBase"]
@@ -121,62 +134,75 @@ div[class$="-inner"]
     + aside[class$="-upsellContainer"] {
     display: none !important;
 }
+
 /* Hide Nitro quality selectors and upsell */
 div[class$="-footer"] > div > div > div[class*="-pillContainer"] {
     display: none !important;
 }
+
 div[class$="-footer"] > div[class$="-upsellRibbonContainer"] {
     display: none !important;
 }
+
 /* Upsell banner in soundboard */
 div[id^="popout_"] div[class$="-upsellContainerFloating"] {
     display: none !important;
 }
+
 /* Custom video background upsell */
 div[class$="-newBackgroundTooltipContainer"]:has(
         div[class*="-backgroundCustomInlineUpsellBackground"]
     ) {
     display: none !important;
 }
+
 /* Promoted quests in "Now playing" sidebar */
 div[class$="-interactive"]
     > div
     > div[class$="-inset"]:has(img[src*="/quests/"]) {
     display: none !important;
 }
+
 /* Nitro WARP+ ad in untrusted links modal */
 div[class*="-linkCalloutContainer"]
     ~ div[class*="-container"]:has(div[class$="-ctaContainer"]) {
     display: none !important;
 }
+
 /* Settings pages */
 /* WARP+ Cloudflare sponsorship */
 /* Fucking... Privacy via Cloudflare? Seriously? */
 div[data-settings-sidebar-item="private_browsing_panel"] {
     display: none !important;
 }
+
 /* Billing settings */
 div[data-list-id="settings-sidebar"]
     > nav
     > ul:has(div[data-settings-sidebar-item="nitro_panel"]) {
     display: none !important;
 }
+
 /* Profile customisation banner ad */
 div[class*="-settingsPage"] > div > div:has(div[class*="-artContainer"]) {
     display: none !important;
 }
+
 /* Avatar picker Nitro exclusives */
 #user-settings-change-avatar-change-avatar-decoration {
     display: none !important;
 }
+
 div[class*="-imageSelectionSection"]
     > ul[class*="-optionsList"]
     > li:has(div[class*="-gifGrid"]) {
     display: none !important;
 }
+
 div[class*="-modalContent"] > div[class*="-upsellContainer"] {
     display: none !important;
 }
+
 /* Avatar decoration, nameplate, and profile effect settings */
 div[class*="-settingsPage"]
     > div
@@ -190,6 +216,7 @@ div[class*="-settingsPage"]
         display: none !important;
     }
 }
+
 /* Profile settings bottom upsell ("Try Nitro!" preview) */
 div[class*="-settingsPage"] {
     div[class*="-premiumFeatureBorder"],
@@ -197,30 +224,36 @@ div[class*="-settingsPage"] {
         display: none !important;
     }
 }
+
 /* Server profiles upsell */
 div[class*="-profileCustomizationSection"]
     div[class*="-upsellOverlayContainer"] {
     display: none !important;
 }
+
 /* App colour */
 div[role="radiogroup"] {
     div[class*="-container"]:has(img[src*="/assets/content/"]) {
         display: none;
     }
+
     section:has(svg[class*="nitroWheel"]),
     div[class$="-colorThemesBackground"],
     + div[class$="-divider"] {
         display: none !important;
     }
 }
+
 /* Nitro app icons */
 div[class*="-selectionGroup"]:has([class*="-appIconSelectionContainer"]) {
     display: none !important;
 }
+
 /* Entrance sounds picker */
 div[data-debug-key="entrance_sounds_setting"] {
     display: none !important;
 }
+
 /* Guilds blocking */
 /* Server boost button */
 #guild-header-popout
@@ -229,10 +262,12 @@ div[data-debug-key="entrance_sounds_setting"] {
     > div[id="guild-header-popout-premium-subscribe"] {
     display: none !important;
 }
+
 /* Hide upsell banner for messages that are too long */
 div[class*="characterCount"] > div[class*="-upsell"] {
     display: none !important;
 }
+
 /* Hide message length Nitro "subscribe" button */
 div[role="dialog"]
     > div
@@ -241,15 +276,18 @@ div[role="dialog"]
     > button:has(svg[class*="premiumIcon"]) {
     display: none !important;
 }
+
 /* Boost goal bar */
 ul[class*="-content"]
     > div[class*="-container"]:has(div[class*="-progressContainer"]) {
     display: none !important;
 }
+
 /* Nitro Boosted guild icon */
 div[class*="-guildIconContainer"]:has(svg[class*="-boostedGuildIconGem"]) {
     display: none !important;
 }
+
 /* User profile ads */
 /* Profile badges */
 div[class*="-tags"]
@@ -257,14 +295,17 @@ div[class*="-tags"]
     ~ div[class*="-container"] {
     display: none !important;
 }
+
 /* Store button in profile */
 div[class*="-profileButtons"] > span:nth-of-type(1) {
     display: none !important;
 }
+
 /* User profiles wishlist */
 div[class$="user-profile-sidebar"] div[class$="-wishlistBreadcrumb"] {
     display: none !important;
 }
+
 /* Custom emoji popout container upsell */
 div[class$="-emojiSection"] > button[class*="-shinyButton"],
 div[class$="-emojiSection"]
@@ -276,15 +317,18 @@ div[class$="-reactionTooltip"]
     > div:has(div[class$="-reactionEmojiDetailsClickable"]) {
     display: none !important;
 }
+
 /* Super reaction upsell */
 div[class*="-burstReactionTooltipPrompt"][class$="-burstReactionTooltipSpacer"] {
     display: none !important;
 }
+
 /* Nitro Boost upsell in role icons popout */
 div[class$="-popoutContainer"]:has(div[class$="-roleIconContainer"]) {
     div[class$="-mainContent"] > div[class$="-truncatingText"] > div {
         display: none !important;
     }
+
     button {
         display: none !important;
     }
