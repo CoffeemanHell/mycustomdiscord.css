@@ -1,6 +1,6 @@
 /*
 ╔════════════════════════════╗
-║ Version: 1263 - Rebuild: 3 ║
+║ Version: 1264 - Rebuild: 3 ║
 ╚════════════════════════════╝
 */
 @layer UserTheme {
@@ -178,10 +178,7 @@ div[class^="imageSelectionSection_"] {
 }
 
 /* Avatar decoration, nameplate, and profile effect settings */
-div[class^="profileCustomizationSection__"]
-    > div[class^="baseLayout__"]
-    > div[class^="formContent__"]
-    > div[class^="sectionsContainer_"] {
+div[class^="profileCustomizationSection__"] div[class^="sectionsContainer_"] {
     div[class^="customizationSection_"]:nth-of-type(5),
     div[class^="customizationSection_"]:nth-of-type(6),
     div[class^="customizationSection_"]:nth-of-type(7) {
