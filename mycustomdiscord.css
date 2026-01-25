@@ -48,7 +48,7 @@
     }
 
     /* ANIMATIONS
-       ============================================ */
+       ============================================ *
     [class*="layerContainer" i] [class*="layer" i],
     [class*="menu" i],
     [class*="tooltip" i] {
@@ -114,6 +114,11 @@ div[class^="buttons__"]
 div[class^="emojiPicker_"] div[class^="upsellContainer__"] {
     display: none !important;
 }
+
+/* Super reaction button in emoji picker */
+	#emoji-picker-tab-panel > div > div:has(#burst-reaction-toggle-button) {
+	display: none;
+	}
 
 /* Nitro nag in bottom left pop-out personal mini profile (TODO Ad not found while updating list)
 div[class$="-inner"] > div[class$="-scrollerBase"] > div[class$="-username"] + aside[class$="-upsellContainer"] {
