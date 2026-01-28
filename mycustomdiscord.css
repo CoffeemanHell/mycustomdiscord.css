@@ -93,6 +93,11 @@ div[id^="popout_"]:has(img[class$="-gameServerHostingImage"]) {
   display: none !important;
 } */
 
+/* You have X days left to try Nitro banner (January 2026) */
+div[class^="notice"]:has(path[d^="M16.23 12c0 1.29-.95 2.25-2.22 2.25A2.18"]) {
+  display: none;
+}
+	
 /* Nitro, Shop, and Quests buttons */
 ul[role="list"] {
     div:has([data-list-item-id$="__nitro"]),
@@ -117,7 +122,7 @@ div[class^="emojiPicker_"] div[class^="upsellContainer__"] {
 
 /* Super reaction button in emoji picker */
 	#emoji-picker-tab-panel > div > div:has(#burst-reaction-toggle-button) {
-	display: none;
+	  display: none;
 	}
 
 /* Nitro nag in bottom left pop-out personal mini profile (TODO Ad not found while updating list)
