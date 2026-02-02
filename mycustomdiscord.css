@@ -1,6 +1,6 @@
 /*
 ╔════════════════════════════╗
-║ Version: 1264 - Rebuild: 3 ║
+║ Version: 1266 - Rebuild: 3 ║
 ╚════════════════════════════╝
 */
 @layer UserTheme {
@@ -11,7 +11,7 @@
     }
 
     * {
-        scrollbar-width: none;
+        scrollbar-width: none !important;
         interpolate-size: allow-keywords;
     }
 
@@ -87,7 +87,6 @@
 */
 
 /* Chat view blocks */
-/* Seasonal Nitro nag (Winter 2025 and possibly future ones) */
 /* Game server ad (TODO Ad not found while updating list)
 div[id^="popout_"]:has(img[class$="-gameServerHostingImage"]) {
   display: none !important;
@@ -95,9 +94,9 @@ div[id^="popout_"]:has(img[class$="-gameServerHostingImage"]) {
 
 /* You have X days left to try Nitro banner (January 2026) */
 div[class^="notice"]:has(path[d^="M16.23 12c0 1.29-.95 2.25-2.22 2.25A2.18"]) {
-  display: none;
+    display: none !important;
 }
-	
+
 /* Nitro, Shop, and Quests buttons */
 ul[role="list"] {
     div:has([data-list-item-id$="__nitro"]),
@@ -121,9 +120,9 @@ div[class^="emojiPicker_"] div[class^="upsellContainer__"] {
 }
 
 /* Super reaction button in emoji picker */
-	#emoji-picker-tab-panel > div > div:has(#burst-reaction-toggle-button) {
-	  display: none;
-	}
+#emoji-picker-tab-panel > div > div:has(#burst-reaction-toggle-button) {
+    display: none !important;
+}
 
 /* Nitro nag in bottom left pop-out personal mini profile (TODO Ad not found while updating list)
 div[class$="-inner"] > div[class$="-scrollerBase"] > div[class$="-username"] + aside[class$="-upsellContainer"] {
@@ -160,6 +159,11 @@ div[class*="-linkCalloutContainer"] ~ div[class*="-container"]:has(div[class$="-
   display: none !important;
 } */
 
+/* Quests icon next to games in members list */
+svg[class^="questsIcon_"] {
+    display: none !important;
+}
+
 /* Settings pages */
 /* WARP+ Cloudflare sponsorship */
 /* TODO Is this gone?
@@ -179,14 +183,6 @@ div[class^="settingsPage_"]
     display: none !important;
 }
 
-/* Avatar picker GIF grid and upsell container */
-div[class^="imageSelectionSection_"] {
-    li:has(div[class^="gifGrid_"]),
-    ~ div[class^="upsellContainer__"] {
-        display: none !important;
-    }
-}
-
 /* Avatar decoration, nameplate, and profile effect settings */
 div[class^="profileCustomizationSection__"] div[class^="sectionsContainer_"] {
     div[class^="customizationSection_"]:nth-of-type(5),
@@ -198,6 +194,17 @@ div[class^="profileCustomizationSection__"] div[class^="sectionsContainer_"] {
 
 /* Avatar decoration button in profile settings sidebar */
 #user-settings-change-avatar-change-avatar-decoration {
+    display: none !important;
+}
+
+/* Avatar picker GIF grid and upsell container */
+div[class^="imageSelectionSection_"] {
+    li:has(div[class^="gifGrid_"]),
+    ~ div[class^="upsellContainer__"] {
+        display: none !important;
+    }
+}
+div[class^="modalContent__"] div[class^="upsellContainer__"] {
     display: none !important;
 }
 
