@@ -1,6 +1,6 @@
 /*
 ╔════════════════════════════╗
-║ Version: 1266 - Rebuild: 3 ║
+║ Version: 1269 - Rebuild: 3 ║
 ╚════════════════════════════╝
 */
 @layer UserTheme {
@@ -107,10 +107,11 @@ ul[role="list"] {
 }
 
 /* Gift button */
-div[class^="buttons__"]
-    > div[class^="button__"]:not(
-        div[class^="expression-picker-chat-input-button"]
-    ):not(div[class$="app-launcher-entrypoint"]) {
+div[class^="channelBottomBarArea"]
+    div[class^="buttons_"]
+    > div:not(div[class^="expression-picker-chat-input-button"]):not(
+        div[class$="app-launcher-entrypoint"]
+    ):has(div[class^="lottieIcon_"]) {
     display: none !important;
 }
 
@@ -154,10 +155,12 @@ div[class$="-interactive"] > div > div[class$="-inset"]:has(img[src*="/quests/"]
   display: none !important;
 } */
 
-/* Nitro WARP+ ad in untrusted links modal TODO Spawn an untrusted link modal
-div[class*="-linkCalloutContainer"] ~ div[class*="-container"]:has(div[class$="-ctaContainer"]) {
-  display: none !important;
-} */
+/* Nitro WARP+ ad in untrusted links modal */
+/* TODO Spawn an untrusted link modal */
+div[class^="linkCalloutContainer_"]
+    ~ div[class^="container__"]:has(div[class^="ctaContainer__"]) {
+    display: none !important;
+}
 
 /* Quests icon next to games in members list */
 svg[class^="questsIcon_"] {
@@ -166,10 +169,9 @@ svg[class^="questsIcon_"] {
 
 /* Settings pages */
 /* WARP+ Cloudflare sponsorship */
-/* TODO Is this gone?
 div[data-settings-sidebar-item="private_browsing_panel"] {
-  display: none !important;
-} */
+    display: none !important;
+}
 
 /* Billing settings */
 div[data-list-id="settings-sidebar"]
