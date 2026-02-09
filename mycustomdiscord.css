@@ -1,6 +1,6 @@
 /*
 ╔════════════════════════════╗
-║ Version: 1269 - Rebuild: 3 ║
+║ Version: 1270 - Rebuild: 3 ║
 ╚════════════════════════════╝
 */
 @layer UserTheme {
@@ -91,6 +91,13 @@
 div[id^="popout_"]:has(img[class$="-gameServerHostingImage"]) {
   display: none !important;
 } */
+
+/* Valentines 2026 gift button popup */
+div[id^="popout_"]:has(
+        img[src="https://cdn.discordapp.com/assets/content/5dfef8152e15e88d17a282438dd8b5ebdc6d136928da827d178d2f2371b196b3.png"]
+    ) {
+    display: none !important;
+}
 
 /* You have X days left to try Nitro banner (January 2026) */
 div[class^="notice"]:has(path[d^="M16.23 12c0 1.29-.95 2.25-2.22 2.25A2.18"]) {
