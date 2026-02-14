@@ -1,6 +1,6 @@
 /*
 ╔════════════════════════════╗
-║ Version: 1270 - Rebuild: 3 ║
+║ Version: 1271 - Rebuild: 3 ║
 ╚════════════════════════════╝
 */
 @layer UserTheme {
@@ -279,6 +279,13 @@ div[role="dialog"] {
 div[class^="sidebarList__"]
     ul
     > div[class^="container__"]:has(div[class^="progressContainer__"]) {
+    display: none !important;
+}
+
+/* Server tag badge packs for boosts ad */
+div[id^="popover"]:has(
+        img[src="https://cdn.discordapp.com/assets/content/196e929b196180fe33dc1fca35f40478270ff03434e24f72ca3cc64ee94222b4.png"]
+    ) {
     display: none !important;
 }
 
