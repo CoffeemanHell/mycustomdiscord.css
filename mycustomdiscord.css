@@ -1,6 +1,6 @@
 /*
 ╔════════════════════════════╗
-║ Version: 1271 - Rebuild: 3 ║
+║ Version: 1275 - Rebuild: 3 ║
 ╚════════════════════════════╝
 */
 @layer UserTheme {
@@ -87,15 +87,8 @@
 */
 
 /* Chat view blocks */
-/* Game server ad (TODO Ad not found while updating list)
-div[id^="popout_"]:has(img[class$="-gameServerHostingImage"]) {
-  display: none !important;
-} */
-
-/* Valentines 2026 gift button popup */
-div[id^="popout_"]:has(
-        img[src="https://cdn.discordapp.com/assets/content/5dfef8152e15e88d17a282438dd8b5ebdc6d136928da827d178d2f2371b196b3.png"]
-    ) {
+/* Game server ad */
+div[id^="popout_"]:has(img[class*="gameServerHostingImage"]) {
     display: none !important;
 }
 
@@ -132,16 +125,15 @@ div[class^="emojiPicker_"] div[class^="upsellContainer__"] {
     display: none !important;
 }
 
-/* Nitro nag in bottom left pop-out personal mini profile (TODO Ad not found while updating list)
-div[class$="-inner"] > div[class$="-scrollerBase"] > div[class$="-username"] + aside[class$="-upsellContainer"] {
-  display: none !important;
-} */
-
-/* Hide Nitro quality selectors and upsell (TODO Couldn't open devtools in official client)
-div[class$=-footer] > div > div > div[class*="-pillContainer"] {
-  display: none !important;
+/* Hide Nitro quality selectors and upsell (Disabled due to conflict with FakeNitro Vencord plugin)
+div[class^=footer] {
+  div[class^="upsellRibbonContainer"],
+  div[class^="pillContainer"] div[class*="premiumOption"] {
+    display: none !important;
+  }
 }
-div[class$=-footer] > div[class$=-upsellRibbonContainer] {
+
+div[role="menuitemradio"]:has(div[class^="premiumOptionContainer"]) {
   display: none !important;
 } */
 
@@ -157,10 +149,11 @@ div[class^="newBackgroundTooltipContainer__"]:has(
     display: none !important;
 }
 
-/* Promoted quests in "Now playing" sidebar TODO Look for a promo quest here
-div[class$="-interactive"] > div > div[class$="-inset"]:has(img[src*="/quests/"])  {
-  display: none !important;
-} */
+/* "Quest" ads in "Active now" */
+div[class^="nowPlayingColumn"]
+    div[class*="inset"]:has(div[class^="instructions"]) {
+    display: none !important;
+}
 
 /* Nitro WARP+ ad in untrusted links modal */
 /* TODO Spawn an untrusted link modal */
